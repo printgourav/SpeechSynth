@@ -9,10 +9,7 @@ const stopButton = document.querySelector('#stop');
 function populateVoices(){
     voices = this.getVoices();
     voicesDropdown.innerHTML = voices
-    .filter(voice =>{
-     const languages = ['hi-IN', 'en-IN', 'en-US'];
-    return languages.some(lang => voice.lang.includes(lang));
-    }
+    .filter(voice => voices.filter(voice => voice.lang.includes('hi-IN'))
     .map(voice => `<option value "${voices.name}">${voice.name} (${voice.lang})</option`)
     .join('');
 }
