@@ -27,7 +27,6 @@ msg.text = document.querySelector('[name="text"]').value;
 }
 
 function setOption(){
-    console.log(this.name, this.value);
     msg[this.name] = this.value;
     toggle();
 }
@@ -37,6 +36,7 @@ voicesDropdown.addEventListener('change', setVoice);
 options.forEach(option => option.addEventListener('chnage', setOption));
 speakButton.addEventListener('click', toggle);
 stopButton.addEventListener('click', () => toggle(false))
+
 
 
 
