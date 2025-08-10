@@ -9,7 +9,7 @@ const stopButton = document.querySelector('#stop');
 function populateVoices(){
     voices = this.getVoices();
     voicesDropdown.innerHTML = voices.filter(voice => voice.lang.includes('en-IN'))
-    .map(voice => `<option value "${voices.name}">${voice.name} (${voice.lang})</option`)
+    .map(voice => `<option value = "${voices.name}">${voice.name} (${voice.lang})</option`)
     .join('');
 }
 
@@ -36,6 +36,7 @@ voicesDropdown.addEventListener('change', setVoice);
 options.forEach(option => option.addEventListener('chnage', setOption));
 speakButton.addEventListener('click', toggle);
 stopButton.addEventListener('click', () => toggle(false))
+
 
 
 
